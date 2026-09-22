@@ -34,9 +34,14 @@ public class ServicesImpl{
 
         return cells;
     }
+<<<<<<< HEAD
     public Cell[][] markCell(int i, int j) {
         game.markCell(i, j);
         return game.getBoard();
     }
+=======
+
+    public markCell
+>>>>>>> 64004e6eaa929f0a29faf72da2524d7b4de96e07
     
 }
