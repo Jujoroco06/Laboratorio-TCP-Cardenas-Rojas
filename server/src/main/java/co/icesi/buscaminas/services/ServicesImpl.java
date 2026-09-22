@@ -18,8 +18,9 @@ public class ServicesImpl{
     }
     
     public boolean selectCell(int i, int j) {
+
         
-        return game.selectCell(i, j);
+        return game.selectCell(i, j)?game.markCell(i,j):false;
     }
 
     public void showAll(boolean show) {

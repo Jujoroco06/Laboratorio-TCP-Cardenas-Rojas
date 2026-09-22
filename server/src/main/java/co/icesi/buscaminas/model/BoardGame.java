@@ -129,11 +129,12 @@ public class BoardGame {
         return board;
     }
 
-    public void markCell(int i, int j) {
+    public boolean markCell(int i, int j) {
         if(i<0 || i>= board.length || j<0 || j >= board[0].length ){
             throw new RuntimeException("Cell no valid");
         }
         Cell cell = board[i][j];
         cell.setMarked(!cell.isMarked());
+        return true;
     }
 }
