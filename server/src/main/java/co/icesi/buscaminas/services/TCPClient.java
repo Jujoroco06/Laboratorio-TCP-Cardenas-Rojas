@@ -4,10 +4,14 @@ import java.io.BufferedWriter;
 import java.net.Socket;
 
 public class TCPClient {
-    public static void main(String[] args) {
-        try {
-            Socket socket = new Socket("127.0.0.1", 12345);
+    //public static void main(String[] args) {
+        //try {
+            //Socket socket = new Socket("127.0.0.1", 12345);
 
-        }
-    }
+        //}
+    //}
+
+
+
+    // Esta clase se debe borrar. mira bien el taller tiene que estar en otro modulo
 }

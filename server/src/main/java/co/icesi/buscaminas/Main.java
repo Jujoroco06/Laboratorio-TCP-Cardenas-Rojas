@@ -12,8 +12,8 @@ public class Main {
     {
         ServicesImpl serv = new ServicesImpl();
         new Thread(() -> apply(serv.getGame())).start();
-        // TCPController controller = new TCPController(serv);
-        // controller.startService();
+        TCPController controller = new TCPController(serv);
+        controller.startService();
 
         TCPController iceController = new TCPController(serv);
         iceController.startService();
