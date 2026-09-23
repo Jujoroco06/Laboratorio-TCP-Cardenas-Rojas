@@ -81,6 +81,8 @@ public class MainCliente {
                                 System.out.println("FELICIDADES GANASTE");
                             } else
                                 System.out.println("PERDISTE ");
+                        } else {
+                            System.out.println(" ");
                         }
 
                     } else {

@@ -73,7 +73,7 @@ public class TCPController {
     }
 
     class TCPClientHandler implements Runnable {
-        //TODO: 
+        // TODO:
         private Socket clientSocket;
         private ServicesImpl services;
 
@@ -105,9 +105,9 @@ public class TCPController {
 
                             response.data.put("gameEnd", resp);
                         } catch (Exception e) {
+                            response.status = "OK";
                             response.data.put("gameEnd", true);
                             response.data.put("win", false);
-
                         }
                         Cell[][] board = services.printBoard();
                         response.data.put("board", board);
@@ -133,17 +133,17 @@ public class TCPController {
                         response.data.put("board", board);
                         break;
                     case "MARK_CELL":
-                        int mi = Integer.parseInt(data.get ("i"));
-                        int mj = Integer.parseInt(data.get ("j"));
+                        int mi = Integer.parseInt(data.get("i"));
+                        int mj = Integer.parseInt(data.get("j"));
                         try {
-                            services.markCell(mi,mj);
+                            services.markCell(mi, mj);
                             response.status = "OK";
-                        } catch ( Exception e) {
+                        } catch (Exception e) {
                             response.status = "ERROR";
-                            response.data.put(" message ", e.getMessage()) ;
+                            response.data.put(" message ", e.getMessage());
                         }
-                        board = services.printBoard () ;
-                        response.data.put(" board ",board );
+                        board = services.printBoard();
+                        response.data.put(" board ", board);
                         break;
 
                     default:
