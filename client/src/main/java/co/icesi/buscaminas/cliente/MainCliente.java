@@ -79,8 +79,10 @@ public class MainCliente {
                         if (gameEnd != null && gameEnd) {
                             if (win != null && win) {
                                 System.out.println("FELICIDADES GANASTE");
-                            } else
+                            } else {
                                 System.out.println("PERDISTE ");
+                                imprimirTablero(board);
+                            }
                         } else {
                             System.out.println(" ");
                         }
